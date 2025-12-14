@@ -1,0 +1,14 @@
+[project]
+name = "ci-cd-practice"
+version = "0.1.0"
+dependencies = [
+  "fastapi",
+  "uvicorn"
+]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
