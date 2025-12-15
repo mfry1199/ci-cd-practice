@@ -67,7 +67,7 @@ jobs:
 
           - name: Debug secret
             run: |
-              if [ -z "${{ secrets.GHCR_PAT }}" ]; then
+              if [ -z "${{ secrets.GHPR_PAT }}" ]; then
                 echo "Secret is empty"
                 exit 1
               else
@@ -79,7 +79,7 @@ jobs:
             with:
                 registry: ghcr.io
                 username: ${{ github.actor }}
-                password: ${{ secrets.GHCR_PAT }}
+                password: ${{ secrets.GHPR_PAT }}
 
           - name: Build Docker image
             run: |
